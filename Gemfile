@@ -15,7 +15,9 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # add gem progresql
 gem 'pg'
+# Install gem for enumerize
 
+gem 'enumerize'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

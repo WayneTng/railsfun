@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
+  extend Enumerize
 
+  enumerize :difficulty_level, in: [:easy, :medium, :hard]
   belongs_to :category
 
   before_validation :strip_html_from_description

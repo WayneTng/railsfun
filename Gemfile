@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#install formtastic this is for the form
+gem 'formtastic'
 # install gem for countries
 gem 'countries'
 # add gem progresql

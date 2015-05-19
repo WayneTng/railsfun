@@ -1,4 +1,7 @@
 class Product < ActiveRecord::Base
+
+  belongs_to :category
+
   before_validation :strip_html_from_description
   before_validation :set_title_to_lower_case
 

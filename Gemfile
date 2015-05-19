@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# install gem for countries
+gem 'countries'
 # add gem progresql
 gem 'pg'
 # Install gem for enumerize

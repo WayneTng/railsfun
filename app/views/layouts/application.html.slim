@@ -8,5 +8,7 @@ html
   body
     - flash.each do |name, msg|
       = content_tag :div, msg, class: name
-    = yield
-    .copyright = "Copyright #{DateTime.now.year}"
+    .container
+      .row
+        = yield
+        .copyright = "Copyright #{DateTime.now.year}"

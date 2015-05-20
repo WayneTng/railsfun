@@ -15,8 +15,10 @@ class ProductsController < ApplicationController
     product_params = params.require(:product).permit(:title, :description, :price, :published, :category_id, :difficulty_level)
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = 'You have successfully created your product!'
       redirect_to products_url
     else
+      flash.now[:notice] = 'There is an error with your input'
       render :new
     end
   end

@@ -1,0 +1,8 @@
+$font_size: 200%;
+$color: blue;
+
+#products_show{
+  .product{
+    @include fontsize_color($color, $font_size);
+  }
+}

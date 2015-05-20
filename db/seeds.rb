@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Product.destroy_all
-Category.destory_all
+Category.destroy_all
 
 book_category = Category.create!(title: 'Book')
 programming_category = Category.create!(title: 'Programming')

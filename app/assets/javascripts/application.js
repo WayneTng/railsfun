@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= global.js
 //= require_tree .
 //= require bootstrap

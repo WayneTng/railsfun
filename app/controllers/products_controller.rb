@@ -16,6 +16,16 @@ class ProductsController < ApplicationController
     render :new
   end
 
+  def destroy
+    @product = Product.find(params.require(:id))
+    if @product.destroy
+      flash[:notice] = 'You have successfully delete your product'
+    else
+      flash[:notice] = 'there is an error in deletion'
+    end
+      redirect_to products_url
+  end
+
   def update
     @product  = Product.find(params.require(:id))
     product_params = params.require(:product).permit(:title, :description, :price, :published, :category_id, :difficulty_level)

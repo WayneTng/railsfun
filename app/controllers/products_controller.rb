@@ -11,6 +11,23 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
+  def edit
+    @product = Product.find(params[:id])
+    render :new
+  end
+
+  def update
+    @product  = Product.find(params.require(:id))
+    product_params = params.require(:product).permit(:title, :description, :price, :published, :category_id, :difficulty_level)
+    if @product.update(product_params)
+      flash[:notice] = 'You have successfully updated your product!'
+      redirect_to edit_product_url(@product)
+    else
+      flash.now[:notice] = 'There is an error with your input'
+      render :new
+    end
+
+  end
   def create
     product_params = params.require(:product).permit(:title, :description, :price, :published, :category_id, :difficulty_level)
     @product = Product.new(product_params)
